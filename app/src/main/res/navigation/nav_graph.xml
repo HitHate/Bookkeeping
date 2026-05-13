@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/Total">
+
+
+    <fragment
+        android:id="@+id/Total"
+        android:name="com.example.bookkeeping.ui.total.TotalFragment"
+        android:label="@string/total_fragment_label"
+        tools:layout="@layout/fragment_total">
+    </fragment>
+
+    <fragment
+        android:id="@+id/TotalPayGet"
+        android:name="com.example.bookkeeping.ui.totalPayGet.TotalPayGetFragment"
+        android:label="@string/total_pay_get_fragment_label"
+        tools:layout="@layout/fragment_total_pay_get">
+
+    </fragment>
+    <fragment
+        android:id="@+id/Get"
+        android:name="com.example.bookkeeping.ui.get.GetFragment"
+        android:label="@string/get_fragment_label"
+        tools:layout="@layout/fragment_get">
+    </fragment>
+
+    <fragment
+        android:id="@+id/Pay"
+        android:name="com.example.bookkeeping.ui.pay.PayFragment"
+        android:label="@string/pay_fragment_label"
+        tools:layout="@layout/fragment_pay">
+    </fragment>
+
+</navigation>

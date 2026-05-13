@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/Total"
+            android:icon="@drawable/shouzhifenxi"
+            android:title="@string/total_fragment_label" />
+        <item
+            android:id="@+id/TotalPayGet"
+            android:icon="@drawable/shouzhi"
+            android:title="@string/total_pay_get_fragment_label" />
+        <item
+            android:id="@+id/Get"
+            android:icon="@drawable/shourumingxi"
+            android:title="@string/get_fragment_label" />
+        <item
+            android:id="@+id/Pay"
+            android:icon="@drawable/zhichumingxi"
+            android:title="@string/pay_fragment_label" />
+    </group>
+</menu>
