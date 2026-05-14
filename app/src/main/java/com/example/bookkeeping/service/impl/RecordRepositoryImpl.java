@@ -11,7 +11,6 @@ import com.example.bookkeeping.util.AppExecutors;
 
 import java.time.YearMonth;
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
@@ -96,11 +95,11 @@ public class RecordRepositoryImpl implements RecordRepository {
     @Override
     public List<Object> searchRecords(String keyword,String type) {
         if(type.equals("全部")){
-            return buildFlatList(recordDAO.searchRecords(keyword));
+            return buildFlatList(recordDAO.searchRecords(keyword+"*"));
         }else if(type.equals("收入")){
-            return buildFlatList(recordDAO.searchRecordByType(keyword,1));
+            return buildFlatList(recordDAO.searchRecordByType(keyword+"*",1));
         } else{
-            return buildFlatList(recordDAO.searchRecordByType(keyword,0));
+            return buildFlatList(recordDAO.searchRecordByType(keyword+"*",0));
         }
     }
 

@@ -5,7 +5,6 @@ import androidx.room.Dao;
 import androidx.room.Delete;
 import androidx.room.Insert;
 import androidx.room.Query;
-import androidx.room.Transaction;
 import androidx.room.Update;
 
 import com.example.bookkeeping.entity.Record;
@@ -44,6 +43,6 @@ public interface RecordDAO {
     List<Record> searchRecords(String query);
 
     @Query("SELECT Record.* FROM record_fts JOIN Record ON record_fts.rowid = Record.id " +
-            "WHERE record_fts MATCH :query AND Record.type = :type")
+            "WHERE record_fts MATCH :query AND Record.type = :type ORDER BY Record.yearmonth DESC ,Record.create_time DESC")
     List<Record> searchRecordByType(String query, int type);
 }
